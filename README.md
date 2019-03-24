@@ -1,2 +1,3 @@
-# ModernACRESTAngular
-Angular SPA for testing with Auth0
+npm install
+npm start
+npm run-script build

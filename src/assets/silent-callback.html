@@ -1,0 +1,12 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.7.0/oidc-client.js"></script>
+<script>
+  	var settings = {
+	  //added to avoid calling user info endpoint:
+	  loadUserInfo: false,
+	  response_mode: 'query'
+    };
+  var mgr = new Oidc.UserManager(settings);
+  mgr.signinSilentCallback().catch(error => {
+        console.error(error);
+    });
+</script>

@@ -34,7 +34,7 @@ export class TestApiService {
       'Authorization': 'Bearer ' + token
     });
 
-    return this._httpClient.get(Constants.apiRoot + "test", { headers: headers })
+    return this._httpClient.get(Constants.apiRoot, { headers: headers })
       .toPromise()
       .catch((result : HttpErrorResponse) => {
           if (result.status === 401){
